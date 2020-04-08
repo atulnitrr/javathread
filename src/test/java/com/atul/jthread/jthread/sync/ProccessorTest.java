@@ -20,10 +20,12 @@ class ProccessorTest {
     void ttest() throws InterruptedException {
         final Thread thread = new Thread(proccessor);
         thread.start();
+        System.out.println("SLeeping for 12 secc enter to shutdown");
+        Thread.sleep(1000);
+        proccessor.shutDown();
+        System.out.println("Done running ");
+        Thread.sleep(2000);
         System.out.println("Press enter to shutdown");
-//        Scanner scanner = new Scanner(System.in);
-//        scanner.next();
-//        proccessor.shutDown();
-//        Thread.sleep(1200);
+
     }
 }

@@ -2,7 +2,7 @@ package com.atul.jthread.jthread.sync;
 
 public class Proccessor implements Runnable {
 
-    private boolean running = true;
+    private volatile boolean running = true;
 
     public void shutDown() {
         running = false;
